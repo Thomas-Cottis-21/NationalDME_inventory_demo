@@ -1,0 +1,126 @@
+/* General */
+html, body {
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Login form */
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/images/backgrounds/beach_clinic.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#login div.logo img {
+    width: 100%;
+}
+
+/* uncomment below if client wants to change background for cellphones */
+
+@media (min-width: 500px) {
+    #login {
+        background-image: url("/assets/images/backgrounds/emergency.jpg");
+    }
+}
+#login .login-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50dvw;
+    height: 50dvh;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+}
+#login .login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45%;
+}
+#login .login-container form:nth-child(-n+2) {
+    width: 45%;
+}
+#login .login-container input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px 10px 0px;
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: ease-in-out;
+    transition-duration: .5s;
+}
+#login .login-container input::placeholder {
+    color: black;
+}
+#login .login-container input:focus {
+    outline: none;
+}
+#login .login-container form .submit {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#login .login-container form .submit button {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 10px 0px 0px;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: ease-in-out;
+    transition-duration: .2s;
+}
+#login .login-container form .submit button:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+#login .login-container form .submit button a {
+    text-decoration: none;
+    color: black;
+}
+#login .login-container form .error {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    color: #e72323;
+}
+
+@media (max-width: 1100px) {
+    #login .login-container {
+        width: 65vw;
+        height: 65vh;
+    }
+    #login .login-container form:nth-child(-n+2) {
+        width: 45%;
+    }
+}
+@media (max-width: 400px) {
+    #login .login-container {
+        width: 85vw;
+        height: 55vh;
+    }
+    #login .login-container form:nth-child(-n+2) {
+        width: 85%;
+    }
+}
