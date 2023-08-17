@@ -18,109 +18,71 @@ body::-webkit-scrollbar {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url("/assets/images/backgrounds/beach_clinic.jpg");
+}
+#login .login-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: end;
+    width: 100%;
+    height: 40vh;
+    background-image: url("/assets/images/backgrounds/flower-dark.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     background-size: cover;
 }
-
-#login div.logo img {
-    width: 100%;
+#login .login-intro .login-message {
+    margin: 0px 0px 0px 40px;
+    width: 50%;
 }
-
-/* uncomment below if client wants to change background for cellphones */
-
-@media (min-width: 500px) {
-    #login {
-        background-image: url("/assets/images/backgrounds/emergency.jpg");
-    }
+#login .login-intro h1 {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    color: #f7f7f7;
 }
 #login .login-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    width: 50dvw;
-    height: 50dvh;
-    border-radius: 10px;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    -moz-backdrop-filter: blur(2px);
+    justify-content: start;
+    width: 100%;
+    height: 60vh;
+    background-color: #f7f7f7;
 }
 #login .login-container form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 45%;
+    margin-top: 35px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
 }
-#login .login-container form:nth-child(-n+2) {
-    width: 45%;
+#login .login-container form div {
+    padding: 10px;
 }
-#login .login-container input {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 10px 10px 0px;
-    font-size: 1.8rem;
+#login .login-container form div input {
+    font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
+    padding: 5px;
     color: black;
+    border: black;
     background-color: transparent;
-    border: none;
-    border-bottom: 2px solid black;
-    transition: ease-in-out;
-    transition-duration: .5s;
+    border-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #c5c5c5;
+    transition: .4s ease-in-out;
 }
-#login .login-container input::placeholder {
-    color: black;
-}
-#login .login-container input:focus {
+#login .login-container form div input:focus {
     outline: none;
+    border: 1px solid #92C800;
+    border-radius: 5px;
 }
-#login .login-container form .submit {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-#login .login-container form .submit button {
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: black;
+#login .login-container form div.submit button {
+    color: #f7f7f7;
+    font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
-    padding: 10px 0px 10px 0px;
-    margin: 0px 10px 0px 0px;
-    border: none;
-    border-bottom: 2px solid black;
-    transition: ease-in-out;
-    transition-duration: .2s;
+    background-color: #92C800;
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
-#login .login-container form .submit button:hover {
+#login .login-container form div.submit button:hover {
     cursor: pointer;
-    opacity: .5;
 }
-#login .login-container form .submit button a {
-    text-decoration: none;
-    color: black;
-}
-#login .login-container form .error {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.8rem;
-    color: #e72323;
-}
-
-@media (max-width: 1100px) {
-    #login .login-container {
-        width: 65vw;
-        height: 65vh;
-    }
-    #login .login-container form:nth-child(-n+2) {
-        width: 45%;
-    }
-}
-@media (max-width: 400px) {
-    #login .login-container {
-        width: 85vw;
-        height: 55vh;
-    }
-    #login .login-container form:nth-child(-n+2) {
-        width: 85%;
-    }
-}
+/* 92C800 login button accent color */
