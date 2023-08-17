@@ -8,6 +8,37 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+button.button {
+    color: #f7f7f7;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    background-color: #92C800;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+button.button:hover {
+    cursor: pointer;
+}
+h1.general {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    color: #808080;
+}
+h2.general {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    color: #808080;
+}
+h3.general {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #808080;
+}
+span.data {
+    font-style: italic;
+    color: #92C800;
+}
 
 /* Login form */
 
@@ -74,15 +105,42 @@ body::-webkit-scrollbar {
     border: 1px solid #92C800;
     border-radius: 5px;
 }
-#login .login-container form div.submit button {
-    color: #f7f7f7;
-    font-size: 1.2rem;
-    font-family: "Roboto", sans-serif;
-    background-color: #92C800;
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
-#login .login-container form div.submit button:hover {
-    cursor: pointer;
-}
 /* 92C800 login button accent color */
+
+#panel {
+    margin-left: 15px;
+}
+#panel .data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+#panel .data-container div.general-data div.data-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+#panel .data-container div.general-data div.data-list-item button {
+    margin-left: 20px;
+}
+
+#panel .data-container div.count-data {
+    width: 100%;
+    height: 43vh;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#panel .data-container div.count-data::-webkit-scrollbar {
+    display: none;
+}
+
+#panel .data-container div.count-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}

@@ -3,11 +3,20 @@ class General {
 
 pageRedirect = (element, url) => {
 
-    element.addEventListener("click", () => {
+    if (element) {
 
-        window.location.href = url;
+        element.addEventListener("click", () => {
+    
+            window.location.href = url;
+    
+        })
 
-    })
+    } else {
+
+        return;
+
+    }
+
 
 }
 
