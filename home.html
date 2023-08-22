@@ -19,7 +19,7 @@
 <body>
   <section id="navbar">
 
-    <nav class="navbar navbar-light">
+    <nav class="navbar fixed-top navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Thomas</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,6 +43,9 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Report Bug</a></li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Finished a Clinic?</a>
               </li>
             </ul>
           </div>
@@ -105,13 +108,6 @@
             <hr>
           </div>
             
-          <div class="data-list-item">
-            <div class="clinic-data">
-              <h1 class="general">Clinic: <span>74139A</span></h1>
-              <h3 class="general">Duration: <span>45 min</span></h3>
-            </div>
-            <hr>
-          </div>
             
         </div>
   
@@ -127,11 +123,83 @@
 
       <div class="commence-clinic">
 
-        <input type="text" name="clinic" id="clinic" placeholder="Select Clinic">
+        <input type="text" class="general" name="clinic" id="clinic" placeholder="Select Clinic">
 
         <div class="controls">
-          <button class="button back">Back</button>
-          <button class="button start">Start</button>
+          <button class="button back" id="select-clinic-back">Back</button>
+          <button class="button start" id="select-clinic-start">Start</button>
+        </div>
+
+      </div>
+
+      <div class="run-clinic">
+
+        <div class="clinic-controls">
+          
+          <input type="text" class="general" name="item" id="item" placeholder="Item">
+          <img src="/assets/images/icons/up.svg" id="count-up">
+          <input type="text" class="general" name="count" id="count" placeholder="Quantity">
+          <img src="/assets/images/icons/down.svg" id="count-down">
+          <button id="submit-count" class="button">Submit Count</button>
+
+          <div class="clinic-count">
+            <h3 class="general">47 | 150</h3>
+          </div>
+
+        </div>
+
+        <div class="clinic-count-data" id="clinic-count-data">
+          
+          <div class="item-count" data-item="12345" data-count="8">
+            <span class="data">12345</span>
+            <span class="data">8</span>
+          </div>
+          
+          <div class="item-count" data-item="98765" data-count="12">
+              <span class="data">98765</span>
+              <span class="data">12</span>
+          </div>
+          
+          <div class="item-count" data-item="24680" data-count="5">
+              <span class="data">24680</span>
+              <span class="data">5</span>
+          </div>
+          
+          <div class="item-count" data-item="13579" data-count="9">
+              <span class="data">13579</span>
+              <span class="data">9</span>
+          </div>
+          
+          <div class="item-count" data-item="86420" data-count="6">
+              <span class="data">86420</span>
+              <span class="data">6</span>
+          </div>
+
+          <div class="item-count" data-item="57231" data-count="10">
+            <span class="data">57231</span>
+            <span class="data">10</span>
+          </div>
+          
+          <div class="item-count" data-item="98723" data-count="4">
+              <span class="data">98723</span>
+              <span class="data">4</span>
+          </div>
+          
+          <div class="item-count" data-item="31415" data-count="7">
+              <span class="data">31415</span>
+              <span class="data">7</span>
+          </div>
+          
+          <div class="item-count" data-item="62654" data-count="2">
+              <span class="data">62654</span>
+              <span class="data">2</span>
+          </div>
+          
+          <div class="item-count" data-item="88888" data-count="11">
+              <span class="data">88888</span>
+              <span class="data">11</span>
+          </div>
+
         </div>
 
       </div>

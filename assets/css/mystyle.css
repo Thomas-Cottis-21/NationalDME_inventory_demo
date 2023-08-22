@@ -46,11 +46,21 @@ h3.general {
     font-family: "Roboto", sans-serif;
     color: #808080;
 }
-span.data {
+li.general {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #808080;
+}
+span.important-data {
     font-style: italic;
     color: #92C800;
 }
-input {
+span.data {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    color: #808080;
+}
+input.general {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
     padding: 5px;
@@ -66,6 +76,11 @@ input:focus {
     outline: none;
     border: 1px solid #92C800;
     border-radius: 5px;
+}
+
+/* navbar */
+.navbar {
+    background-color: #343434;
 }
 
 /* Login form */
@@ -135,14 +150,18 @@ input:focus {
 }
 /* 92C800 login button accent color */
 
+#panel {
+    margin: 50px 0px 0px 0px;
+}
 #track {
     display: flex;
     flex-direction: row;
     transition: ease-in-out;
-    transition-duration: .5s;
+    transition-duration: .3s;
 }
 #track > div {
     flex: 0 0 100%;
+    margin: 20px 0px 0px 0px;
 }
 #panel .data-container {
     display: flex;
@@ -188,8 +207,6 @@ input:focus {
     justify-content: center;
 }
 #panel .commence-clinic input {
-    font-size: 1.4rem;
-    font-family: "Roboto", sans-serif;
     text-align: center;
 }
 
@@ -198,4 +215,44 @@ input:focus {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+#panel .run-clinic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#panel .run-clinic > div {
+    width: 50vw;
+}
+#panel .run-clinic .clinic-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#panel .run-clinic .clinic-controls img {
+    width: 60px;
+    padding: 10px 0px 10px 0px;
+}
+#panel .run-clinic .clinic-count-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 30vh;
+    overflow-y: scroll;
+}
+#panel .run-clinic .clinic-count-data > div.item-count {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+#panel .run-clinic .clinic-count-data > div.item-count span {
+    font-size: 1rem;
 }
