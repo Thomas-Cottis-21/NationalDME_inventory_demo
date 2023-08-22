@@ -18,6 +18,17 @@ class Slider {
 
     }
 
+    slideRight = (button) => {
+
+        button.addEventListener("click", () => {
+
+            this.translateX += 100;
+            this.track.style.transform = "translateX(" + this.translateX + "%)";
+
+        });
+
+    }
+
 }
 
 export default Slider;

@@ -11,6 +11,7 @@ body::-webkit-scrollbar {
 button.button {
     color: #f7f7f7;
     padding: 10px;
+    margin: 15px;
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
     background-color: #92C800;
@@ -19,6 +20,16 @@ button.button {
 }
 button.button:hover {
     cursor: pointer;
+}
+button.back {
+    color: #f7f7f7;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    background-color: #5f5f5f;
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
 h1.general {
     font-size: 1.4rem;
@@ -38,6 +49,23 @@ h3.general {
 span.data {
     font-style: italic;
     color: #92C800;
+}
+input {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+    color: black;
+    border: black;
+    background-color: transparent;
+    border-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #c5c5c5;
+    transition: .4s ease-in-out;
+}
+input:focus {
+    outline: none;
+    border: 1px solid #92C800;
+    border-radius: 5px;
 }
 
 /* Login form */
@@ -107,13 +135,9 @@ span.data {
 }
 /* 92C800 login button accent color */
 
-#panel {
-    margin-left: 15px;
-}
 #track {
     display: flex;
-    flex-direction: row-reverse;
-    overflow-x: hidden;
+    flex-direction: row;
     transition: ease-in-out;
     transition-duration: .5s;
 }
@@ -132,6 +156,7 @@ span.data {
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    width: 90vw;
 }
 #panel .data-container div.general-data div.data-list-item button {
     margin-left: 20px;
@@ -154,4 +179,23 @@ span.data {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 20px;
+}
+
+#panel .commence-clinic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#panel .commence-clinic input {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+#panel .commence-clinic .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
