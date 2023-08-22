@@ -20,7 +20,7 @@ class Time {
     
             container.innerText = `${hoursDifference} : ${minutesDifference} : ${secondsDifference}`;
 
-        })
+        }, 1000);
 
 
     }

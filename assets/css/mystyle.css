@@ -110,11 +110,22 @@ span.data {
 #panel {
     margin-left: 15px;
 }
+#track {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-x: hidden;
+    transition: ease-in-out;
+    transition-duration: .5s;
+}
+#track > div {
+    flex: 0 0 100%;
+}
 #panel .data-container {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    width: 100vw;
 }
 #panel .data-container div.general-data div.data-list-item {
     display: flex;
