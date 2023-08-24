@@ -29,6 +29,27 @@ class Slider {
 
     }
 
+    customSlideLeft = (button, percentage) => {
+
+        button.addEventListener("click", () => {
+
+            this.translateX += percentage;
+            this.track.style.transform = "translateX(" + this.translateX + "%)";
+
+        })
+
+    }
+
+    customSlideRight = (button, percentage) => {
+
+        button.addEventListener("click", () => {
+
+            this.translateX -= percentage;
+            this.track.style.transform = "translateX(" + this.translateX + "%)";
+        })
+
+    }
+
 }
 
 export default Slider;

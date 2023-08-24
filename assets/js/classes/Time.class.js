@@ -15,19 +15,29 @@ class Time {
             let hoursDifference = Math.floor(difference / 3600000);
             let minutesDifference = Math.floor((difference % 3600000) / 60000);
             let secondsDifference = Math.floor(((difference % 3600000) % 60000) / 1000);
+
+            if (difference < 0) {
+
+                container.innerText = "";
+
+                container.innerText = "00 : 00 : 00";
+
+                return;
+
+            }
     
             container.innerText = "";
     
-            container.innerText = `${hoursDifference} : ${minutesDifference} : ${secondsDifference}`;
+            container.innerText = `${this.formatTime(hoursDifference)} : ${this.formatTime(minutesDifference)} : ${this.formatTime(secondsDifference)}`;
 
         }, 1000);
 
 
     }
 
-    runCountDown = (setTime, container) => {
+    formatTime = (part) => {
 
-        this.countdown(setTime, container);
+        return part.toString().padStart(2, "0");
 
     }
 

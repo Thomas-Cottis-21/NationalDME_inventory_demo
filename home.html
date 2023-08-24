@@ -42,10 +42,11 @@
                   <li><a class="dropdown-item" href="#">Route data</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Report Bug</a></li>
+                  <li><a class="dropdown-item" href="/index.html">Logout</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Finished a Clinic?</a>
+                <a class="nav-link" href="#">Wrong clinic?</a>
               </li>
             </ul>
           </div>
@@ -58,12 +59,12 @@
 
     <div id="track">
 
-      <div class="data-container">
+      <div class="data-container" id="data-container">
   
         <div class="general-data">
   
           <div class="data-list-item">
-            <h1 class="general">Time until 3:00PM: <span class="data" id="panel-countdown"></span></h1>
+            <h1 class="general" id="panel-time-title">Time until 3:00PM: <span class="my-data" id="panel-time"></span></h1>
           </div>
     
         </div>
@@ -71,44 +72,64 @@
         <hr>
   
         <div class="data-list-item">
-          <h1 class="general">Clinics counted today: <span class="data">5/11</span></h1>
+          <h1 class="general-title">Clinics counted today: <span class="my-data">5/11</span></h1>
         </div>
   
         <div class="count-data">
   
           <div class="data-list-item">
             <div class="clinic-data">
-              <h1 class="general">Clinic: <span>74139A</span></h1>
-              <h3 class="general">Duration: <span>45 min</span></h3>
+              <h1 class="general">Clinic: <span class="my-data">753823</span></h1>
+              <h3 class="general">Duration: <span class="my-data">58 min</span></h3>
+            </div>
+            <hr>
+          </div>
+          
+          <div class="data-list-item">
+            <div class="clinic-data">
+              <h1 class="general">Clinic: <span class="my-data">982174</span></h1>
+              <h3 class="general">Duration: <span class="my-data">45 min</span></h3>
+            </div>
+            <hr>
+          </div>
+
+          <div class="data-list-item">
+            <div class="clinic-data">
+              <h1 class="general">Clinic: <span class="my-data">87351P</span></h1>
+              <h3 class="general">Duration: <span class="my-data">38 min</span></h3>
+            </div>
+            <hr>
+          </div>
+
+          <div class="data-list-item">
+            <div class="clinic-data">
+              <h1 class="general">Clinic: <span class="my-data">47632H</span></h1>
+              <h3 class="general">Duration: <span class="my-data">49 min</span></h3>
+            </div>
+            <hr>
+          </div>
+
+          <div class="data-list-item">
+            <div class="clinic-data">
+              <h1 class="general">Clinic: <span class="my-data">UTUHRR</span></h1>
+              <h3 class="general">Duration: <span class="my-data">15 min</span></h3>
             </div>
             <hr>
           </div>
   
-          <div class="data-list-item">
-            <div class="clinic-data">
-              <h1 class="general">Clinic: <span>74139A</span></h1>
-              <h3 class="general">Duration: <span>45 min</span></h3>
-            </div>
-            <hr>
-          </div>
-  
-          <div class="data-list-item">
-            <div class="clinic-data">
-              <h1 class="general">Clinic: <span>74139A</span></h1>
-              <h3 class="general">Duration: <span>45 min</span></h3>
-            </div>
-            <hr>
-          </div>
-  
-          <div class="data-list-item">
-            <div class="clinic-data">
-              <h1 class="general">Clinic: <span>74139A</span></h1>
-              <h3 class="general">Duration: <span>45 min</span></h3>
-            </div>
-            <hr>
-          </div>
             
             
+        </div>
+
+        <div class="current-clinic">
+          <div class="title">
+            <h1 class="general-title">Current Clinic</h1>
+            <hr>
+          </div>
+          <div class="clinic-data" id="current-clinic-data">
+            <h1 class="general">Clinic: <span class="my-data">843567</span></h1>
+            <h3 class="general">Current Duration: <span class="my-data">10 min</span></h3>
+          </div>
         </div>
   
         <div class="count-controls">
@@ -143,7 +164,7 @@
           <button id="submit-count" class="button">Submit Count</button>
 
           <div class="clinic-count">
-            <h3 class="general">47 | 150</h3>
+            <h3 class="my-data">47 | 150</h3>
           </div>
 
         </div>
@@ -151,55 +172,69 @@
         <div class="clinic-count-data" id="clinic-count-data">
           
           <div class="item-count" data-item="12345" data-count="8">
-            <span class="data">12345</span>
-            <span class="data">8</span>
+            <span class="backend-data">12345</span>
+            <span class="backend-data">8</span>
           </div>
-          
+
+    
           <div class="item-count" data-item="98765" data-count="12">
-              <span class="data">98765</span>
-              <span class="data">12</span>
+              <span class="backend-data">98765</span>
+              <span class="backend-data">12</span>
           </div>
-          
+
+    
           <div class="item-count" data-item="24680" data-count="5">
-              <span class="data">24680</span>
-              <span class="data">5</span>
+              <span class="backend-data">24680</span>
+              <span class="backend-data">5</span>
           </div>
-          
+
+    
           <div class="item-count" data-item="13579" data-count="9">
-              <span class="data">13579</span>
-              <span class="data">9</span>
+              <span class="backend-data">13579</span>
+              <span class="backend-data">9</span>
           </div>
-          
+
+    
           <div class="item-count" data-item="86420" data-count="6">
-              <span class="data">86420</span>
-              <span class="data">6</span>
+              <span class="backend-data">86420</span>
+              <span class="backend-data">6</span>
           </div>
+
 
           <div class="item-count" data-item="57231" data-count="10">
-            <span class="data">57231</span>
-            <span class="data">10</span>
-          </div>
-          
-          <div class="item-count" data-item="98723" data-count="4">
-              <span class="data">98723</span>
-              <span class="data">4</span>
-          </div>
-          
-          <div class="item-count" data-item="31415" data-count="7">
-              <span class="data">31415</span>
-              <span class="data">7</span>
-          </div>
-          
-          <div class="item-count" data-item="62654" data-count="2">
-              <span class="data">62654</span>
-              <span class="data">2</span>
-          </div>
-          
-          <div class="item-count" data-item="88888" data-count="11">
-              <span class="data">88888</span>
-              <span class="data">11</span>
+            <span class="backend-data">57231</span>
+            <span class="backend-data">10</span>
           </div>
 
+    
+          <div class="item-count" data-item="98723" data-count="4">
+              <span class="backend-data">98723</span>
+              <span class="backend-data">4</span>
+          </div>
+
+    
+          <div class="item-count" data-item="31415" data-count="7">
+              <span class="backend-data">31415</span>
+              <span class="backend-data">7</span>
+          </div>
+
+    
+          <div class="item-count" data-item="62654" data-count="2">
+              <span class="backend-data">62654</span>
+              <span class="backend-data">2</span>
+          </div>
+
+    
+          <div class="item-count" data-item="88888" data-count="11">
+              <span class="backend-data">88888</span>
+              <span class="backend-data">11</span>
+          </div>
+
+
+        </div>
+
+        <div class="clinic-exit">
+          <button class="button" id="finish-clinic">Finish Clinic</button>
         </div>
 
       </div>

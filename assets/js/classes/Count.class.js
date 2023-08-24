@@ -1,20 +1,42 @@
 class Count {
 
-    countUp = (chevron, quantityInput) => {
+    countUp = (chevron, quantityInput, itemInput) => {
 
         chevron.addEventListener("click", ()  => {
 
-            quantityInput.value++;
+            if (itemInput.value == "") {
+
+                quantityInput.value = "";
+                
+            } else {
+
+                quantityInput.value++;
+
+            }
 
         })
 
     }
 
-    countDown = (chevron, quantityInput) => {
+    countDown = (chevron, quantityInput, itemInput) => {
 
         chevron.addEventListener("click", () => {
 
-            quantityInput.value--;
+            if (itemInput.value == "") {
+
+                quantityInput.value = "";
+            }
+
+            if (quantityInput.value <= 0) {
+
+                return;
+
+            } else {
+
+                quantityInput.value--;
+
+            }
+
 
         })
 
@@ -48,6 +70,37 @@ class Count {
             }
 
         })
+
+    }
+
+    checkCount = (quantityInput, itemInput) => {
+
+        quantityInput.addEventListener("input", () => {
+
+            if (itemInput.value == "") {
+
+                quantityInput.value = "";
+
+            }
+
+            if (quantityInput.value.includes("-")) {
+
+                quantityInput.value = "0";
+
+            }
+
+        })
+
+        itemInput.addEventListener("input", () => {
+
+            if (itemInput.value == "") {
+
+                quantityInput.value = "";
+
+            }
+
+        })
+
 
     }
 

@@ -1,7 +1,4 @@
 /* General */
-html, body {
-    overflow: hidden;
-}
 body {
     margin: 0px;
 }
@@ -31,20 +28,65 @@ button.back {
     border: 1px solid transparent;
     border-radius: 5px;
 }
+.my-data {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    color: #005ead;
+}
+.backend-data {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    color: #c24919;
+}
 h1.general {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
     color: #808080;
+}
+h1.my-data {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    color: #005ead;
+}
+h1.backend-data {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    color: #c24919;
+}
+h1.general-title {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    color: black;
 }
 h2.general {
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
     color: #808080;
 }
+h2.my-data {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    color: #005ead;
+}
+h2.backend-data {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    color: #c24919;
+}
 h3.general {
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
     color: #808080;
+}
+h3.my-data {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #005ead;
+}
+h3.backend-data {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #c24919;
 }
 li.general {
     font-size: 1rem;
@@ -152,6 +194,7 @@ input:focus {
 
 #panel {
     margin: 50px 0px 0px 0px;
+    overflow-x: hidden;
 }
 #track {
     display: flex;
@@ -199,6 +242,10 @@ input:focus {
     align-items: center;
     margin-top: 20px;
 }
+#panel .data-container div.current-clinic {
+    width: 100%;
+    margin-top: 30px;
+}
 
 #panel .commence-clinic {
     display: flex;
@@ -230,7 +277,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 #panel .run-clinic .clinic-controls img {
     width: 60px;
@@ -240,7 +287,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100vw;
     height: 30vh;
     overflow-y: scroll;
@@ -249,10 +296,17 @@ input:focus {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: space-between;
+    width: 50%;
     padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #c5c5c5;
 }
 #panel .run-clinic .clinic-count-data > div.item-count span {
     font-size: 1rem;
+}
+#panel .run-clinic .clinic-exit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
